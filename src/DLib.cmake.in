@@ -1,12 +1,12 @@
-FIND_LIBRARY(DLib_LIBRARY DLib
+FIND_LIBRARY(dlib-utils_LIBRARY dlib-utils
     PATHS @CMAKE_INSTALL_PREFIX@/lib
 )
-FIND_PATH(DLib_INCLUDE_DIR DLibConfig.cmake
+FIND_PATH(dlib-utils_INCLUDE_DIR dlib-utilsConfig.cmake
     PATHS @CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME@ 
 )
-LIST(APPEND DLib_INCLUDE_DIR
-  ${DLib_INCLUDE_DIR}/../ ${DLib_INCLUDE_DIR}/../DUtils
-  ${DLib_INCLUDE_DIR}/../DUtilsCV ${DLib_INCLUDE_DIR}/../DVision)
-SET(DLib_LIBRARIES ${DLib_LIBRARY})
-SET(DLib_LIBS ${DLib_LIBRARY})
-SET(DLib_INCLUDE_DIRS ${DLib_INCLUDE_DIR})
+LIST(APPEND dlib-utils_INCLUDE_DIR
+  ${dlib-utils_INCLUDE_DIR}/../ ${dlib-utils_INCLUDE_DIR}/../DUtils
+  ${dlib-utils_INCLUDE_DIR}/../DUtilsCV ${dlib-utils_INCLUDE_DIR}/../DVision)
+SET(dlib-utils_LIBRARIES ${dlib-utils_LIBRARY})
+SET(dlib-utils_LIBS ${dlib-utils_LIBRARY})
+SET(dlib-utils_INCLUDE_DIRS ${dlib-utils_INCLUDE_DIR})
