@@ -83,8 +83,8 @@ include_directories(include/DUtils include/DUtilsCV include/DVision ${OpenCV_INC
 add_library(${PROJECT_NAME} ${LIB_SHARED} ${SRCS})
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
 
-configure_file(src/DLib.cmake.in
-  "${PROJECT_BINARY_DIR}/DLibConfig.cmake" @ONLY)
+configure_file(src/dlib-utils.cmake.in
+  "${PROJECT_BINARY_DIR}/dlib-utilsConfig.cmake" @ONLY)
 
 install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 if(BUILD_DUtils)
@@ -96,7 +96,7 @@ endif()
 if(BUILD_DVision)
   install(DIRECTORY include/DVision DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
 endif()
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/DLibConfig.cmake"
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/dlib-utilsConfig.cmake"
   DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME})
-install(FILES "${PROJECT_BINARY_DIR}/DLibConfig.cmake" 
+install(FILES "${PROJECT_BINARY_DIR}/dlib-utils.cmake" 
   DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/DLib/)
