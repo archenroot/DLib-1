@@ -121,7 +121,7 @@ void SurfSet::_ExtractUpright(const cv::Mat &image, double hessianTh, bool exten
 
 void SurfSet::extract(const cv::Mat &image, const SURFParams &params)
 {
-  Ptr<SURF> surf = SURF::create(
+  cv::Ptr<SURF> surf = SURF::create(
         params.hessianThreshold, params.nOctaves, params.nOctaveLayers,
         params.extended, params.upright);
 
