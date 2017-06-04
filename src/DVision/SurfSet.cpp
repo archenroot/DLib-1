@@ -29,6 +29,7 @@
 
 using namespace std;
 using namespace DVision;
+using namespace cv::xfeatures2d;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -120,7 +121,7 @@ void SurfSet::_ExtractUpright(const cv::Mat &image, double hessianTh, bool exten
 
 void SurfSet::extract(const cv::Mat &image, const SURFParams &params)
 {
-  cv::xfeatures2d::SURF surf(
+  Ptr<SURF> surf = SURF::create(
         params.hessianThreshold, params.nOctaves, params.nOctaveLayers,
         params.extended, params.upright);
 
