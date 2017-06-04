@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project(DLib)
+project(dlib-utils)
 
 option(BUILD_DUtils   "Build DUtils (basic c++ functions)." ON)
 option(BUILD_DUtilsCV "Build DUtilsCV (OpenCV functions, requires DUtils)." ON)
