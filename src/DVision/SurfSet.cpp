@@ -120,7 +120,7 @@ void SurfSet::_ExtractUpright(const cv::Mat &image, double hessianTh, bool exten
 
 void SurfSet::extract(const cv::Mat &image, const SURFParams &params)
 {
-  cv::SURF surf(
+  cv::xfeatures2d::SURF surf(
         params.hessianThreshold, params.nOctaves, params.nOctaveLayers,
         params.extended, params.upright);
 
